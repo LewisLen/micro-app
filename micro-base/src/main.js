@@ -7,9 +7,9 @@ Vue.config.productionTip = false;
 
 registerMicroApps([
   {
-    name: 'react app', // app name registered
-    entry: '//localhost:3000',
-    container: '#app',
+    name: 'micro-react', // app name registered
+    entry: '//localhost:3301',
+    container: '#container',
     activeRule: '/sub-react',
   },
   {
