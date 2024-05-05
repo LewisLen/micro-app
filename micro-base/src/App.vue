@@ -6,7 +6,7 @@
     <nav>
       <div @click="routerFn">react</div>
       <router-link to="/sub-react" style="color: blue; fontsize: 25px">App2 - Home</router-link> |
-      <router-link to="/app3" style="color: blue; fontsize: 25px">App3 - Home</router-link> |
+      <router-link to="/sub-vue" style="color: blue; fontsize: 25px">App3 - Home</router-link> |
     </nav>
     <div id="container"></div>
     <router-view />

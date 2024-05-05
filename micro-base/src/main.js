@@ -5,6 +5,10 @@ import { registerMicroApps, start } from 'qiankun';
 
 Vue.config.productionTip = false;
 
+const getMenus = () => {
+  return 'getMenus-function';
+};
+
 registerMicroApps([
   {
     name: 'micro-react', // app name registered
@@ -13,10 +17,15 @@ registerMicroApps([
     activeRule: '/sub-react',
   },
   {
-    name: 'vue app',
-    entry: { scripts: ['//localhost:7100/main.js'] },
-    container: '#yourContainer2',
-    activeRule: '/yourActiveRule2',
+    name: 'micro-vue',
+    // entry: { scripts: ['//localhost:3302/main.js'] },
+    entry: '//localhost:3302',
+    container: '#container',
+    activeRule: '/sub-vue',
+    props: {
+      token: 'token======xasdfafdsafdeqwr3q453543',
+      getMenus,
+    },
   },
 ]);
 
