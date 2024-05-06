@@ -9,6 +9,14 @@ const getMenus = () => {
   return 'getMenus-function';
 };
 
+function genActiveRuleEx(routerPrefix) {
+  return (location) => location.pathname === routerPrefix;
+}
+
+function genActiveRule(routerPrefix) {
+  return (location) => location.pathname.startsWith(routerPrefix);
+}
+
 registerMicroApps([
   {
     name: 'micro-react', // app name registered
@@ -20,6 +28,10 @@ registerMicroApps([
     // },
     container: '#container',
     activeRule: '/sub-react',
+    props: {
+      token: 'token======xasdfafdsafdeqwr3q453543',
+      getMenus,
+    },
   },
   {
     name: 'micro-vue',
@@ -32,6 +44,25 @@ registerMicroApps([
       getMenus,
     },
   },
+  {
+    name: 'micro-jquery',
+    // 这里要具体到传统页面
+    entry: '//localhost:5500/micro-jquery/index.html',
+    container: '#container',
+    activeRule: '/micro-jquery',
+    props: {
+      token: 'token======xasdfafdsafdeqwr3q453543',
+      getMenus,
+    },
+    // activeRule: genActiveRuleEx('/micro-jquery/index.html'),
+  },
+  // {
+  //   name: 'micro-jquery-about',
+  //   // 这里要具体到传统页面
+  //   entry: '//localhost:5500/micro-jquery/about.html',
+  //   container: '#container',
+  //   activeRule: '/micro-jquery',
+  // },
 ]);
 
 new Vue({
