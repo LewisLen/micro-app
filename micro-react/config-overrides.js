@@ -1,12 +1,12 @@
 // 在根目录下新增config-overrides.js文件并新增如下配置
-const { name } = require('./package');
+const { name } = require('./package.json');
 
 module.exports = {
   webpack: (config) => {
     // config.output.library = `${name}-[name]`;
     config.output.library = 'micro-react';
     config.output.libraryTarget = 'umd';
-    config.output.globalObject = 'window';
+    // config.output.globalObject = 'window';
     config.output.chunkLoadingGlobal = `webpackJsonp_${name}`;
     return config;
   },

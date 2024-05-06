@@ -13,6 +13,11 @@ registerMicroApps([
   {
     name: 'micro-react', // app name registered
     entry: '//localhost:3301',
+    // entry: { scripts: ['//localhost:3301/static/js/bundle.js'] },
+    // entry: {
+    //   // scripts: ['//localhost:3301/micro-react/dist/main.js'],
+    //   scripts: ['//localhost:3301/main.js'],
+    // },
     container: '#container',
     activeRule: '/sub-react',
   },
