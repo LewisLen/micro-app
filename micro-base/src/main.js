@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router/index';
 import { registerMicroApps, start } from 'qiankun';
+import './assets/reset.css';
 
 Vue.config.productionTip = false;
 
