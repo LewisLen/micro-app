@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <style>
+      .title {
+        height: 100px;
+        line-height: 100px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 class="title">主应用 菜单</h2>
+    <!-- 每次页面刷新，都会丢失路由 -->
+    <iframe
+      src="http://127.0.0.1:5500/micro-test.html"
+      frameborder="0"
+      width="1000px"
+      height="300px"
+      border="1px solid #ccc"
+    ></iframe>
+
+    <script>
+      window.micro_app_info = 'qiankun';
+      console.log('===window.micro_app_info===', window.micro_app_info);
+      window.sessionStorage.setItem('microservice', 'microservice----base');
+    </script>
+  </body>
+</html>
