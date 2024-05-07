@@ -1,5 +1,5 @@
 const render = ($) => {
-  $('#micro-jquery-box').html('Hello, render with jQuery');
+  $('#micro-jquery-box').html('微前端jQuery子应用首页');
   return Promise.resolve();
 };
 
@@ -11,6 +11,7 @@ const render = ($) => {
     },
     mount: (props) => {
       console.log('micro-jquery mount', props);
+      $('#micro-jquery-token').html(props.token);
       return render($);
     },
     unmount: (props) => {
