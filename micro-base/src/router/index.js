@@ -16,6 +16,14 @@ const routes = [
     },
     component: () => import('@/HomePage.vue'),
   },
+  {
+    path: '/about',
+    name: 'AboutPage',
+    meta: {
+      title: '主应用-关于我们',
+    },
+    component: () => import('@/views/AboutPage.vue'),
+  },
 ];
 
 const router = new VueRouter({

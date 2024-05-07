@@ -1,8 +1,12 @@
 import Vue from 'vue';
+import { registerMicroApps, start } from 'qiankun';
 import App from './App.vue';
 import router from './router/index';
-import { registerMicroApps, start } from 'qiankun';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import './assets/reset.css';
+
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
